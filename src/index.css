@@ -9,7 +9,7 @@
 /* Fundo bonito com degradê */
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5caf1, #e7aeec);
+  background-color: rgb(0, 0, 0); 
   display: flex;
   justify-content: center;
   align-items: center;
