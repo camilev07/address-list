@@ -1,68 +1,101 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Reset básico */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Fundo bonito com degradê */
+body {
   min-height: 100vh;
+  background: linear-gradient(135deg, #f5caf1, #e7aeec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Card principal */
+.principal-card {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Título */
+.principal-card h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Formulário */
+.form-endereco {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f8b8f8;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Botão */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: pink;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background: rgb(255, 223, 228);
+  transform: translateY(-2px);
 }
+
+/* Cards dos endereços */
+.card-endereco {
+  background: #f8f9ff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.card-endereco:hover {
+  transform: translateY(-3px);
+}
+
+/* Texto interno */
+.card-endereco p {
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.erro {
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 4px;
+}
+
